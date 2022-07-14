@@ -4,18 +4,13 @@ import Info from "./Info.js";
 
 console.log(Info);
 
-function Entry(props){
-   return <Card 
-      title={props.title}
-      emoji={props.emoji}
-      describe={props.describe}
-   />
-}
+
 
 function App() {
  return <div>
       <h1>EmojiPedia</h1>
-      {Info.map(Entry)}
+      {Info.map(props => ( <Card title={props.title} emoji={props.emoji} describe={props.describe} />)
+)}
    </div>
 }
 
